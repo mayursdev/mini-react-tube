@@ -8,8 +8,8 @@
   cursor: pointer;
 }
 
-.video-card.is-small{
-  padding: 0 5px
+.video-card.is-small {
+  padding: 0 5px;
 }
 
 .video-card.is-small .video-title {
@@ -22,8 +22,14 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
 .video-card.is-small .card-body {
   padding: 10px;
+}
+
+.video-card.is-large img {
+  border-start-start-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .video-card.is-large .video-title {

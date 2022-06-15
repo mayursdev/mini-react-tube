@@ -15,7 +15,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg bg-light shadow-sm">
+      <nav className="navbar navbar-expand-lg bg-light shadow-sm sticky-top">
         <div className="container justify-content-start">
           <a className="navbar-brand fw-bold" href="/">
             MiniTube

@@ -19,7 +19,7 @@ class VideosList extends Component {
       );
     });
 
-    return <div className="videos-list mt-4">{fetchedVideosCards}</div>;
+    return <div className="videos-list">{fetchedVideosCards}</div>;
   }
 }
 

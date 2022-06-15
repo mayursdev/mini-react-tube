@@ -49,7 +49,7 @@ class App extends Component {
     return (
       <>
         <Navbar fetchSearchResults={this.fetchSearchResults} />
-        <div className="container">
+        <div className="container mt-4">
           <div className="row">
             <div className={`col-md-${videoListSize}`}>
               <VideosList
@@ -60,7 +60,7 @@ class App extends Component {
               />
             </div>
             {videoDetailsStatus === "open" ? (
-              <div className="col-md-7">
+              <div className="col-md-8">
                 <VideoDetails selectedVideo={this.state.selectedVideo} />
               </div>
             ) : null}
