@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+/* Navbar index */
+.navbar.sticky-top {
+  z-index: 1;
+}
+
+/* VideoCard Component */
+
 .video-card {
   cursor: pointer;
 }
@@ -41,4 +48,10 @@
 
 .card.video-card:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* VideoDetails Component*/
+.video-details.sticky-top {
+  top: 70px;
+  z-index: 0;
 }

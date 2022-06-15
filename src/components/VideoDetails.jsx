@@ -20,7 +20,7 @@ export default class VideoDetails extends Component {
     const embedVideoSrc = `https://www.youtube.com/embed/${videoId}`;
 
     return (
-      <div className="video-details">
+      <div className="video-details sticky-top">
         <iframe
           width="100%"
           height="315"

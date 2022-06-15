@@ -21,6 +21,7 @@ class App extends Component {
       params: { q: searchQuery, type: "video" },
     });
     const fetchedVideos = resp.data.items;
+
     // const fetchedVideos = sample_response;
     this.setState({ fetchedVideos });
   };
