@@ -8,34 +8,34 @@
   cursor: pointer;
 }
 
-.video-card.is-small {
+.compact .video-card {
   padding: 0 5px;
 }
 
-.video-card.is-small .video-title {
+.compact .video-card .video-title {
   font-size: 14px;
 }
-.video-card.is-small .video-author {
+.compact .video-card .video-author {
   font-size: 12px;
 }
-.video-card.is-small .row {
+.compact .video-card .row {
   align-items: center;
   justify-content: space-evenly;
 }
 
-.video-card.is-small .card-body {
+.compact .video-card .card-body {
   padding: 10px;
 }
 
-.video-card.is-large img {
+.expanded .video-card img {
   border-start-start-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.video-card.is-large .video-title {
+.expanded .video-card .video-title {
   font-size: 1.2rem;
 }
-.video-card.is-large .video-author {
+.expanded .video-card .video-author {
   font-size: 0.9rem;
 }
 

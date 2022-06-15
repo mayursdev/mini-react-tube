@@ -2,22 +2,16 @@ import React, { Component } from "react";
 
 export default class VideoCard extends Component {
   render() {
-    const {
-      video,
-      layoutConfig: { videoCardSize },
-      onVideoSelect,
-      isSelected,
-    } = this.props;
+    const { video, videoDetailsIsOpen, onVideoSelect, isSelected } = this.props;
     const { title, channelTitle, thumbnails } = video.snippet;
 
     const cardBg = isSelected ? "text-bg-dark" : "";
-    const imageSize = videoCardSize === "small" ? "5" : "4";
-    const finalTitle =
-      videoCardSize === "small" ? `${title.substr(0, 50)}...` : title;
+    const imageSize = videoDetailsIsOpen ? "5" : "4";
+    const finalTitle = videoDetailsIsOpen ? `${title.substr(0, 50)}...` : title;
 
     return (
       <div
-        className={`video-card is-${videoCardSize} card mb-3 ${cardBg}`}
+        className={`video-card card mb-3 ${cardBg}`}
         onClick={() => onVideoSelect(video)}
       >
         <div className="row g-0">

@@ -31,35 +31,24 @@ class App extends Component {
   };
 
   render() {
-    const layoutConfigs = {
-      // depending upon whether videoDetails is open or closed
-      open: {
-        videoListSize: "4",
-        videoCardSize: "small",
-      },
-      close: {
-        videoListSize: "11",
-        videoCardSize: "large",
-      },
-    };
-    const videoDetailsStatus = this.state.selectedVideo ? "open" : "close";
-    const layoutConfig = layoutConfigs[videoDetailsStatus];
-    const { videoListSize } = layoutConfig;
+    const videoIsSelected = this.state.selectedVideo ? true : false;
+    const videoListType = videoIsSelected ? "compact" : "expanded";
+    const videoListSize = videoIsSelected ? 4 : 11;
 
     return (
       <>
         <Navbar fetchSearchResults={this.fetchSearchResults} />
         <div className="container mt-4">
           <div className="row">
-            <div className={`col-md-${videoListSize}`}>
+            <div className={`col-md-${videoListSize} ${videoListType}`}>
               <VideosList
                 fetchedVideos={this.state.fetchedVideos}
                 onVideoSelect={this.onVideoSelect}
-                layoutConfig={layoutConfig}
+                videoDetailsIsOpen={videoIsSelected}
                 selectedVideo={this.state.selectedVideo}
               />
             </div>
-            {videoDetailsStatus === "open" ? (
+            {videoIsSelected ? (
               <div className="col-md-8">
                 <VideoDetails selectedVideo={this.state.selectedVideo} />
               </div>

@@ -3,7 +3,8 @@ import VideoCard from "./VideoCard";
 
 class VideosList extends Component {
   render() {
-    const { fetchedVideos, onVideoSelect, selectedVideo } = this.props;
+    const { fetchedVideos, onVideoSelect, videoDetailsIsOpen, selectedVideo } =
+      this.props;
 
     // generate list
     const fetchedVideosCards = fetchedVideos.map((video) => {
@@ -12,9 +13,9 @@ class VideosList extends Component {
         <VideoCard
           key={video.id.videoId}
           video={video}
-          layoutConfig={this.props.layoutConfig}
           onVideoSelect={onVideoSelect}
           isSelected={isSelected}
+          videoDetailsIsOpen={videoDetailsIsOpen}
         />
       );
     });
