@@ -25,6 +25,11 @@
 .compact .video-card .video-author {
   font-size: 12px;
 }
+.compact .video-card .video-timeago {
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 0;
+}
 .compact .video-card .row {
   align-items: center;
   justify-content: space-evenly;
@@ -44,6 +49,12 @@
 }
 .expanded .video-card .video-author {
   font-size: 0.9rem;
+}
+.expanded .video-card .video-timeago {
+  font-weight: normal;
+  font-size: 0.95rem;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
 .card.video-card:hover {

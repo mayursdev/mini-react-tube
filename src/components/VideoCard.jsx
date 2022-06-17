@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { getTimeAgoString } from "../helpers/timeHelper";
 
 export default class VideoCard extends Component {
   render() {
     const { video, videoDetailsIsOpen, onVideoSelect, isSelected } = this.props;
-    const { title, channelTitle, thumbnails } = video.snippet;
+    const { title, channelTitle, thumbnails, publishedAt } = video.snippet;
 
     const cardBg = isSelected ? "text-bg-dark" : "";
     const imageSize = videoDetailsIsOpen ? "5" : "4";
@@ -24,6 +25,9 @@ export default class VideoCard extends Component {
                 {finalTitle}
               </h5>
               <h6 className="video-author">{channelTitle}</h6>
+              <p className="video-timeago">
+                {getTimeAgoString(new Date(), new Date(publishedAt))}
+              </p>
             </div>
           </div>
         </div>

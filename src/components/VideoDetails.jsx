@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { getTimeAgoString } from "../helpers/timeHelper";
 import Spinner from "./Spinner";
 
 export default class VideoDetails extends Component {
@@ -36,7 +37,12 @@ export default class VideoDetails extends Component {
             <h6 className="mb-0">{channelTitle}</h6>
           </div>
           <div className="card-body">
-            <h6 className="upload-time">{this.getFormatedDate(publishedAt)}</h6>
+            <h6 className="upload-time">
+              {this.getFormatedDate(publishedAt)} •{" "}
+              <span className="time-ago">
+                {getTimeAgoString(new Date(), new Date(publishedAt))}
+              </span>
+            </h6>
             <p className="card-text">{description}</p>
           </div>
         </div>
