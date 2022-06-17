@@ -4,6 +4,8 @@ import VideosList from "./VideosList";
 import VideoDetails from "./VideoDetails";
 
 import youtube from "../api/youtube";
+
+// //* Using sample_response.json for testing purposes */
 // import sample_response from "../api/sample_response.json";
 
 class App extends Component {

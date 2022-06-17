@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## 🔑 API KEY SETUP
+
+Rename the ".env_sample" file in root directory of project to ".env" and add in your youtube API key.
+
 ## Available Scripts
 
 In the project directory, you can run:
